@@ -10,7 +10,7 @@ export const Sidebar = () => {
     ];
 
     return (
-        <aside className="hidden md:flex flex-col w-64 h-screen bg-[#001208] text-gray-400 p-6 border-r border-white/5 shrink-0">
+        <aside className="hidden md:flex flex-col fixed left-0 top-0 w-64 h-screen bg-[#001208] text-gray-400 p-6 border-r border-white/5 shrink-0 z-50">
             {/* Logo Section */}
             {/* Logo Section */}
             <div className="flex items-center gap-1 mb-10">
@@ -35,8 +35,8 @@ export const Sidebar = () => {
                     <button
                         key={item.id}
                         className={`w-full flex items-center justify-between px-4 py-3 rounded-xl transition-all duration-200 group ${item.isActive
-                                ? 'bg-[#2D3633] text-white'
-                                : 'hover:bg-white/5 hover:text-gray-200'
+                            ? 'bg-[#2D3633] text-white'
+                            : 'hover:bg-white/5 hover:text-gray-200'
                             }`}
                     >
                         <div className="flex items-center gap-4">

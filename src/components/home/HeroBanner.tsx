@@ -14,9 +14,9 @@ export const HeroBanner = () => {
                 className="absolute pointer-events-none z-0"
                 style={{
                     width: '52%',
-                    height: '120%',
-                    top: '-10%',
-                    left: '-8%',
+                    height: '80%',
+                    top: '10%',
+                    left: '-2%',
                 }}
             >
                 <Image
@@ -35,7 +35,7 @@ export const HeroBanner = () => {
                     <span className="text-[#FFC300]">Social Star</span>
                 </h2>
 
-                <p className="text-white/80 text-[11px] leading-[15px] mt-1.5">
+                <p className="text-white/80 text-[12px] font-bold leading-[15px] mt-1.5">
                     Earn rewards by levelling<br />up your social game
                 </p>
 
@@ -48,10 +48,10 @@ export const HeroBanner = () => {
                     ].map(({ src, label, border }) => (
                         <div key={label} className="flex flex-col items-center gap-1">
                             <div
-                                className="w-8 h-8 rounded-full flex items-center justify-center bg-black/25"
+                                className="w-10 h-10 rounded-full flex items-center justify-center bg-black/25"
                                 style={{ border: `1.5px solid ${border}` }}
                             >
-                                <div className="relative w-4 h-4">
+                                <div className="relative w-5 h-5">
                                     <Image src={src} alt={label} fill className="object-contain" />
                                 </div>
                             </div>

@@ -1,6 +1,9 @@
 import { HeroBanner } from '@/components/home/HeroBanner';
 import { FeaturedTournaments } from '@/components/home/FeaturedTournaments';
 import { BouncyBirdBanner } from '@/components/home/BouncyBirdBanner';
+import { PlayTournamentByGames } from '@/components/home/PlayTournamentByGames';
+import { CompeteInBattles } from '@/components/home/CompeteInBattles';
+import { GameHighlights } from '@/components/home/GameHighlights';
 import { Navbar } from '@/components/layout/Navbar';
 
 export default function HomePage() {
@@ -20,10 +23,14 @@ export default function HomePage() {
         {/* Bouncy Bird Banner */}
         <BouncyBirdBanner />
 
-        {/* Content Area */}
-        <div className="mt-8">
-          <h2 className="text-white text-lg font-semibold">Featured Content</h2>
-        </div>
+        {/* Play Tournament by Games */}
+        <PlayTournamentByGames />
+
+        {/* Compete in Battles */}
+        <CompeteInBattles />
+
+        {/* Game Highlights */}
+        <GameHighlights />
 
       </div>
     </div>
