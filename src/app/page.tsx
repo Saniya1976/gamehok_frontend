@@ -1,5 +1,6 @@
 import { HeroBanner } from '@/components/home/HeroBanner';
 import { FeaturedTournaments } from '@/components/home/FeaturedTournaments';
+import { BouncyBirdBanner } from '@/components/home/BouncyBirdBanner';
 import { Navbar } from '@/components/layout/Navbar';
 
 export default function HomePage() {
@@ -15,6 +16,9 @@ export default function HomePage() {
 
         {/* Featured Tournaments */}
         <FeaturedTournaments />
+
+        {/* Bouncy Bird Banner */}
+        <BouncyBirdBanner />
 
         {/* Content Area */}
         <div className="mt-8">

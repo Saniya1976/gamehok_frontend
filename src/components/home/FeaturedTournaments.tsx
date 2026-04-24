@@ -31,21 +31,24 @@ const tournaments = [
 
 const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boolean }) => (
     <div
-        className={`relative rounded-2xl overflow-hidden bg-[#0A1610] flex-shrink-0 w-[260px] md:w-[48%] lg:w-[47%] transition-all ${active ? 'border-2 border-[#22C55E]' : 'border border-white/10'
+        className={`relative rounded-2xl overflow-hidden bg-[#0A1610] flex-shrink-0 w-[310px] md:w-[48%] lg:hidden transition-all ${active ? 'border-2 border-[#22C55E]' : 'border border-white/10'
             }`}
     >
         {/* Banner Image */}
-        <div className="relative w-full h-[160px]">
+        <div className="relative w-full h-[140px]">
             <Image
                 src={t.image}
                 alt={t.name}
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(max-width: 768px) 260px, 50vw"
+                style={{
+                    objectPosition: 'center calc(50% + 25px)'
+                }}
             />
 
             {/* Overlay gradient at bottom of image */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A1610] via-[#0A1610]/40 to-transparent" />
+            <div className="absolute inset-0" />
 
             {/* Top badges row */}
             <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
@@ -86,7 +89,7 @@ const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boole
         </div>
 
         {/* Card Body */}
-        <div className="px-3 pt-6 pb-3">
+        <div className="px-3 pt-2 pb-3">
             <h4 className="text-white font-bold text-[15px] mb-2">{t.name}</h4>
 
             {/* Tags */}

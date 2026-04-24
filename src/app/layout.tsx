@@ -1,9 +1,15 @@
-// src/app/layout.tsx
 import './globals.css'
+import { Irish_Grover } from 'next/font/google'
 
 import { Sidebar } from '@/components/layout/Sidebar'
 import { RightSidebar } from '@/components/layout/RightSidebar'
 import { MobileNav } from '@/components/layout/MobileNav'
+
+const irishGrover = Irish_Grover({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-irish-grover',
+})
 
 export default function RootLayout({
   children,
@@ -12,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#001208] text-white min-h-screen antialiased">
+      <body className={`${irishGrover.variable} bg-[#001208] text-white min-h-screen antialiased`}>
         <div className="flex w-full min-h-screen overflow-hidden">
           {/* Sidebar - Desktop Only */}
           <Sidebar />
