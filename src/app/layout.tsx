@@ -1,14 +1,19 @@
 import './globals.css'
-import { Irish_Grover } from 'next/font/google'
+import { Irish_Grover, Inter } from 'next/font/google'
 
 import { Sidebar } from '@/components/layout/Sidebar'
-import { RightSidebar } from '@/components/layout/RightSidebar'
+import ConditionalRightSidebar from '@/components/layout/ConditionalRightSidebar'
 import { MobileNav } from '@/components/layout/MobileNav'
 
 const irishGrover = Irish_Grover({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-irish-grover',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 })
 
 export default function RootLayout({
@@ -18,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${irishGrover.variable} bg-[#001208] text-white min-h-screen antialiased`}>
+      <body className={`${irishGrover.variable} ${inter.variable} bg-[#001208] text-white min-h-screen antialiased`}>
         <div className="flex w-full min-h-screen overflow-hidden">
           {/* Sidebar - Desktop Only */}
           <Sidebar />
@@ -28,8 +33,7 @@ export default function RootLayout({
             {children}
           </main>
 
-          {/* Right Sidebar - Large screens only */}
-          <RightSidebar />
+          <ConditionalRightSidebar />
 
           {/* Bottom Nav - Mobile Only */}
           <MobileNav />

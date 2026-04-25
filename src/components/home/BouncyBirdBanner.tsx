@@ -3,7 +3,7 @@ import Image from 'next/image';
 export const BouncyBirdBanner = () => {
     return (
         <section className="mt-8 w-full max-w-[1200px] md:hidden">
-            <div className="relative w-full h-[140px] rounded-[24px] overflow-hidden shadow-lg border border-white/10">
+            <div className="relative w-full h-[140px] rounded-[24px] overflow-hidden shadow-lg border-2 border-white/20">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image

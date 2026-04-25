@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const Navbar = () => {
     return (
-        <nav className="w-full h-16 flex items-center justify-between px-0 md:px-0 mt-2 md:mt-0 border-b border-white/5">
+        <nav className="w-full h-20 flex items-center justify-between px-4 md:px-8 border-b-2 border-white/20">
 
             {/* Mobile View Toggle/Logo */}
             <div className="md:hidden flex items-center px-4">
@@ -25,7 +25,7 @@ export const Navbar = () => {
             {/* Desktop View Right Items */}
             <div className="hidden md:flex flex-1 items-center justify-end gap-6 h-full pr-6">
                 {/* Tickets & Coins Pill */}
-                <div className="flex items-center overflow-hidden rounded-full h-9 border border-white/10">
+                <div className="flex items-center overflow-hidden rounded-full h-10 border-2 border-white/20">
                     <div className="bg-[#1A8948] flex items-center gap-2 px-4 h-full">
                         <span className="text-[14px]">🎟️</span>
                         <span className="text-white font-bold text-[13px]">245</span>

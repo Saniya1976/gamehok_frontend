@@ -16,7 +16,7 @@ export const Sidebar = () => {
     ];
 
     return (
-        <aside className="hidden md:flex flex-col fixed left-0 top-0 w-64 h-screen bg-[#001208] text-gray-400 p-6 border-r border-white/5 shrink-0 z-50">
+        <aside className="hidden md:flex flex-col fixed left-0 top-0 w-64 h-screen bg-[#001208] text-gray-400 p-6 border-r-2 border-white/20 shrink-0 z-50">
             {/* Logo Section */}
             <Link href="/" className="flex items-center gap-1 mb-10">
                 {/* The SVG Logo from public/Group-1214.svg */}
@@ -66,8 +66,7 @@ export const Sidebar = () => {
                 })}
             </nav>
 
-            {/* Logout Button */}
-            <div className="mt-auto border-t border-white/5 pt-6">
+            <div className="mt-auto">
                 <button className="flex items-center gap-4 px-4 py-3 w-full text-gray-400 hover:text-red-400 transition-colors group">
                     <Power size={22} className="text-red-500 group-hover:scale-110 transition-transform" />
                     <span className="font-medium">Logout</span>

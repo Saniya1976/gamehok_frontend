@@ -31,7 +31,7 @@ const tournaments = [
 
 const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boolean }) => (
     <div
-        className={`relative rounded-2xl overflow-hidden bg-[#0A1610] flex-shrink-0 w-[310px] md:w-[48%] lg:w-[47%] transition-all ${active ? 'border-2 border-[#22C55E]' : 'border border-white/10'
+        className={`relative rounded-2xl overflow-hidden bg-[#0A1610] flex-shrink-0 w-[310px] md:w-[48%] lg:w-[47%] transition-all ${active ? 'border-2 border-[#22C55E]' : 'border-2 border-white/20'
             }`}
     >
         {/* Banner Image */}

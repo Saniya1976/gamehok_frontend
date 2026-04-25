@@ -9,10 +9,10 @@ import { Navbar } from '@/components/layout/Navbar';
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#001208] flex flex-col pb-24 md:pb-8">
-      <div className="w-full px-4 md:px-6">
+      {/* Navbar */}
+      <Navbar />
 
-        {/* Navbar */}
-        <Navbar />
+      <div className="w-full px-4 md:px-6">
 
         {/* Hero Banner */}
         <HeroBanner />

@@ -26,7 +26,7 @@ const rankMedal = (rank: number) => {
 export const RightSidebar = () => {
     return (
         <aside
-            className="hidden lg:flex flex-col h-screen sticky top-0 overflow-y-auto no-scrollbar bg-[#001208] border-l border-white/5 py-6 px-5 gap-8"
+            className="hidden lg:flex flex-col h-screen sticky top-0 overflow-y-auto no-scrollbar bg-[#001208] border-l-2 border-white/20 py-6 px-5 gap-8"
             style={{ width: '422px', minWidth: '422px' }}
         >
 
@@ -64,7 +64,7 @@ export const RightSidebar = () => {
             </section>
 
             {/* Divider */}
-            <div className="border-t border-white/5" />
+            <div className="border-t-2 border-white/20" />
 
             {/* ── Upcoming Tournaments ── */}
             <section>
