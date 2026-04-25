@@ -43,14 +43,14 @@ export const BouncyBirdBanner = () => {
                             A game for everyone
                         </p>
 
-                        <span className="text-[#000000] font-bold font-inter text-[16px] mt-3 whitespace-nowrap block">
+                        <span className="text-[#000000] font-bold font-inter text-[15px] mt-3 block whitespace-nowrap">
                             Play daily, win weekly🪙
                         </span>
                     </div>
 
                     {/* Right Section: Bird & Play Button */}
-                    <div className="flex flex-col items-center gap-2">
-                        <div className="relative w-28 h-20 mb-[-5px]">
+                    <div className="flex flex-col items-center justify-center gap-1 pr-1">
+                        <div className="relative w-28 h-20 mb-[-10px]">
                             <Image
                                 src="/bouncy_bird.png"
                                 alt="Bouncy Bird"
@@ -61,18 +61,15 @@ export const BouncyBirdBanner = () => {
 
                         <button className="relative group overflow-visible">
                             <div
-                                className="relative px-4  rounded-full border-[3px] border-[#8D5B3A] flex items-center justify-center overflow-hidden"
+                                className="relative px-5 h-10 rounded-full border-[3px] border-[#8D5B3A] flex items-center justify-center overflow-hidden"
                                 style={{
                                     background: 'linear-gradient(to bottom, #26F026 0%, #0D8D0D 100%)',
                                 }}
                             >
-                                {/* Glossy Highlights on the right */}
                                 <div className="absolute top-1 right-2.5 w-2 h-2 bg-[#FFFFFF] rounded-[60%] blur-[0.5px] rotate-[20deg]"></div>
                                 <div className="absolute top-3 right-2 w-1 h-1 bg-[#FFFFFF] rounded-[60%] blur-[0.5px]"></div>
-
-                                {/* Text with thick outline */}
                                 <span
-                                    className="text-white font-[1000]  font-black-han-sans text-[26px] tracking-tight relative z-10"
+                                    className="text-white font-[1000] font-black-han-sans text-[22px] leading-none tracking-tight relative z-10"
                                     style={{
                                         WebkitTextStroke: '0.5px black',
                                         filter: 'drop-shadow(0.5px 0.5px 0px black)',
@@ -82,7 +79,6 @@ export const BouncyBirdBanner = () => {
                                     Play
                                 </span>
                             </div>
-                            {/* Reflection/Inner Shadow for more depth */}
                             <div className="absolute inset-x-0 top-0 h-1/2 bg-white/10 rounded-t-full pointer-events-none"></div>
                         </button>
                     </div>

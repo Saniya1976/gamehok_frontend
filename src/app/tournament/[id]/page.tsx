@@ -111,7 +111,7 @@ export default function TournamentDetailPage() {
                         </div>
 
                         {/* Organization Logo */}
-                        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1px] border-white/20 bg-[#2E2463] shadow-2xl">
+                        <div className="flex-shrink-0 relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1px] border-white/20 bg-[#2E2463] shadow-2xl">
                             <Image
                                 src="/GS.png"
                                 alt="Org Logo"
@@ -128,14 +128,14 @@ export default function TournamentDetailPage() {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`relative px-4 md:px-8 py-3 md:py-4 text-[13px] md:text-[16px] font-bold transition-all duration-200 ${activeTab === tab
+                                    className={`relative flex-1 md:flex-none px-4 md:px-8 py-3 md:py-4 text-[13px] md:text-[16px] font-bold transition-all duration-200 ${activeTab === tab
                                         ? 'bg-[#052210] text-[#22C55E] rounded-t-xl'
                                         : 'text-gray-500 hover:text-white'
                                         }`}
                                 >
                                     {tab}
                                     {activeTab === tab && (
-                                        <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#22C55E]" />
+                                        <div className="absolute bottom-0 left-0 right-0 h-[3px] md:h-[4px] bg-[#22C55E] z-10" />
                                     )}
                                 </button>
                             ))}
@@ -463,9 +463,9 @@ export default function TournamentDetailPage() {
                                         {['Round 3', 'Round 2', 'Round 1'].map((round, idx) => (
                                             <button
                                                 key={round}
-                                                className={`px-5 py-1.5 rounded-full text-[12px] font-bold transition-colors ${idx === 0
-                                                    ? 'bg-[#052210] text-[#22C55E]'
-                                                    : 'bg-[#1F2937]/50 text-gray-500 hover:text-gray-300'
+                                                className={`px-5 py-1.5 rounded-full text-[12px] font-inter font-bold transition-colors ${idx === 0
+                                                    ? 'bg-[#3C4B43] text-[#ffffff]'
+                                                    : 'bg-[#3C4B43] text-[#ffffff] hover:text-gray-300'
                                                     }`}
                                             >
                                                 {round}
