@@ -12,7 +12,7 @@ export const Sidebar = () => {
         { id: 'home', label: 'Home', icon: Home, href: '/' },
         { id: 'tournament', label: 'My Tournament', icon: Trophy, href: '/tournament/1' },
         { id: 'social', label: 'Social', icon: Users, href: '#' },
-        { id: 'chat', label: 'Chat', icon: MessageSquare, badge: 1, href: '#' },
+        { id: 'chat', label: 'Chat', icon: MessageSquare, href: '#' },
     ];
 
     return (
@@ -56,11 +56,7 @@ export const Sidebar = () => {
                                 <span className="font-medium">{item.label}</span>
                             </div>
 
-                            {item.badge && (
-                                <span className="flex items-center justify-center w-5 h-5 text-[10px] font-bold text-black bg-[#22C55E] rounded-full">
-                                    {item.badge}
-                                </span>
-                            )}
+
                         </Link>
                     )
                 })}
