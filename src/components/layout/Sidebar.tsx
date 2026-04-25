@@ -16,7 +16,7 @@ export const Sidebar = () => {
     ];
 
     return (
-        <aside className="hidden md:flex flex-col fixed left-0 top-0 w-64 h-screen bg-[#001208] text-gray-400 p-6 border-r-2 border-white/20 shrink-0 z-50">
+        <aside className="hidden lg:flex flex-col fixed left-0 top-0 w-64 h-screen bg-[#001208] text-gray-400 p-6 border-r-2 border-white/20 shrink-0 z-50">
             {/* Logo Section */}
             <Link href="/" className="flex items-center gap-1 mb-10">
                 {/* The SVG Logo from public/Group-1214.svg */}

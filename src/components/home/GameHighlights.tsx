@@ -4,7 +4,7 @@ const highlights = [
     {
         id: 1,
         title: 'Call of Duty',
-        image: '/COD.png',
+        image: '/CallofDuty.png',
     },
     {
         id: 2,
@@ -20,11 +20,11 @@ const highlights = [
 
 export const GameHighlights = () => {
     return (
-        <section className="mt-8 w-full">
+        <section className="mt-6 w-full">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
-                <h2 className="text-white font-bold text-[20px]">Game Highlights</h2>
-                <button className="text-[#22C55E] font-bold text-[14px] hover:underline">
+                <h2 className="text-white font-semibold text-[18px]">Game Highlights</h2>
+                <button className="text-[#22C55E] font-semibold text-[14px] hover:underline">
                     View All
                 </button>
             </div>

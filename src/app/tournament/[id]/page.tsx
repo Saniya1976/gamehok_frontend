@@ -15,7 +15,7 @@ export default function TournamentDetailPage() {
     const [activeTab, setActiveTab] = useState('Overview');
 
     return (
-        <div className="min-h-screen bg-[#001208] text-white pb-0">
+        <div className="min-h-screen bg-[#001208] text-white pt-0 md:pt-[74px] lg:pt-[76px] pb-0">
             {/* Main Navbar - Desktop Only */}
             <div className="hidden md:block">
                 <Navbar />
@@ -38,7 +38,7 @@ export default function TournamentDetailPage() {
             {/* Main Content Container */}
             <div className="max-w-[1200px] mx-auto px-0 md:px-8">
                 {/* Banner Section */}
-                <div className="relative w-full aspect-[17/9] md:aspect-[4/1] rounded-none md:rounded-[10px] overflow-hidden border-0 md:border-[2px] border-white shadow-2xl bg-[#050C0A]">
+                <div className="relative w-full aspect-[17/9] md:aspect-[4/1] rounded-none md:rounded-[10px] overflow-hidden border-0 md:border-[1px] border-white shadow-2xl bg-[#050C0A]">
                     <Image
                         src="/featured-tournament.jpg"
                         alt="Tournament Banner"
@@ -47,8 +47,8 @@ export default function TournamentDetailPage() {
                         style={{ objectPosition: 'center 30%' }}
                     />
 
-                    {/* Top Top edge cut - Mobile Only */}
-                    <div className="absolute top-0 left-0 right-0 h-[20px] bg-[#001208] md:hidden z-10" />
+                    {/* Top Top edge cut - Mobile Only Removed for full-bleed look */}
+                    {/* <div className="absolute top-0 left-0 right-0 h-[20px] bg-[#001208] md:hidden z-10" /> */}
 
                     {/* Bottom Greyish Blur Overlay - Mobile Only */}
                     <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-400/20 via-gray-400/5 to-transparent backdrop-blur-[2px] z-10 md:hidden" />
@@ -91,27 +91,27 @@ export default function TournamentDetailPage() {
                     <div className="mt-8 flex justify-between items-start">
                         <div className="space-y-4">
                             <div>
-                                <h1 className="text-[24px] md:text-[32px] font-black uppercase tracking-tight leading-tight">
+                                <h1 className="text-[22px] md:text-[30px] font-black uppercase tracking-tight leading-tight">
                                     GS MONTHLY SHOWDOWN
                                 </h1>
-                                <p className="text-gray-400 font-bold text-[13px] md:text-[14px] mt-1">
+                                <p className="text-white font-bold text-[13px] md:text-[14px] mt-1">
                                     BY GS ESPORTS
                                 </p>
                             </div>
 
                             {/* Category Tags */}
-                            <div className="flex gap-3">
-                                <span className="bg-[#051C0F] text-[#ffffff] text-[12px] font-bold px-3 py-1.5 rounded-md border border-[#22C55E]/20">
+                            <div className="flex gap-2">
+                                <span className="bg-[#051C0F] text-[#ffffff] text-[10px] md:text-[11px] font-bold px-2 py-1 rounded-md">
                                     BGMI
                                 </span>
-                                <span className="bg-[#051C0F] text-[#ffffff] text-[12px] font-bold px-3 py-1.5 rounded-md border border-[#22C55E]/20">
+                                <span className="bg-[#051C0F] text-[#ffffff] text-[10px] md:text-[11px] font-bold px-2 py-1 rounded-md">
                                     Entry-Free
                                 </span>
                             </div>
                         </div>
 
                         {/* Organization Logo */}
-                        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[3px] border-white/20 bg-[#2E2463] shadow-2xl">
+                        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[1px] border-white/20 bg-[#2E2463] shadow-2xl">
                             <Image
                                 src="/GS.png"
                                 alt="Org Logo"
@@ -122,7 +122,7 @@ export default function TournamentDetailPage() {
                     </div>
 
                     {/* Tabs Navigation */}
-                    <div className="mt-12">
+                    <div className="mt-6 md:mt-8">
                         <div className="flex border-b-2 border-white/20">
                             {tabs.map((tab) => (
                                 <button
@@ -152,8 +152,8 @@ export default function TournamentDetailPage() {
                                             <h3 className="text-white text-[18px] font-bold mb-4">Details</h3>
                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
                                                 <div className="flex items-start gap-4">
-                                                    <div className="p-2 bg-[#22C55E]/10 rounded-lg">
-                                                        <Users size={20} className="text-[#22C55E]" />
+                                                    <div className="relative w-8 h-8">
+                                                        <Image src="/teamsize.png" alt="Team Size" fill className="object-contain" />
                                                     </div>
                                                     <div>
                                                         <p className="text-gray-400 text-[11px] uppercase font-bold tracking-wider mb-0.5">Team Size</p>
@@ -161,8 +161,8 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-4">
-                                                    <div className="p-2 bg-[#22C55E]/10 rounded-lg">
-                                                        <Calendar size={20} className="text-[#22C55E]" />
+                                                    <div className="relative w-8 h-8">
+                                                        <Image src="/tournamentsstart.png" alt="Starts" fill className="object-contain" />
                                                     </div>
                                                     <div>
                                                         <p className="text-gray-400 text-[11px] uppercase font-bold tracking-wider mb-0.5">Tournament Starts</p>
@@ -170,10 +170,8 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-4">
-                                                    <div className="p-2 bg-[#22C55E]/10 rounded-lg">
-                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#22C55E]">
-                                                            <path d="M5 3v18" /><path d="M11 3v10" /><path d="M18 11h-7" /><path d="M18 21h-13" />
-                                                        </svg>
+                                                    <div className="relative w-8 h-8">
+                                                        <Image src="/format.png" alt="Format" fill className="object-contain" />
                                                     </div>
                                                     <div>
                                                         <p className="text-gray-400 text-[11px] uppercase font-bold tracking-wider mb-0.5">Format</p>
@@ -181,10 +179,8 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                 </div>
                                                 <div className="flex items-start gap-4">
-                                                    <div className="p-2 bg-[#22C55E]/10 rounded-lg">
-                                                        <div className="relative w-7 h-7">
-                                                            <Image src="/clock.png" alt="clock" fill className="object-contain" />
-                                                        </div>
+                                                    <div className="relative w-8 h-8">
+                                                        <Image src="/check-in.png" alt="Check In" fill className="object-contain" />
                                                     </div>
                                                     <div>
                                                         <p className="text-gray-400 text-[11px] uppercase font-bold tracking-wider mb-0.5">Check-In</p>
@@ -198,7 +194,7 @@ export default function TournamentDetailPage() {
                                         <div className="lg:hidden">
                                             <div className="bg-[#05140C] rounded-xl border border-white/10 overflow-hidden">
                                                 <div className="p-2 bg-white/[0.03] flex justify-between items-center border-b border-white/10">
-                                                    <span className="text-white/80 text-[13px] font-medium">Total Tournament Prize</span>
+                                                    <span className="text-white text-[16px] font-inter font-semibold">Total Tournament Prize</span>
                                                     <div className="flex items-center gap-1.5">
                                                         <span className="text-white text-[16px] font-black">2000</span>
                                                         <span className="text-[16px]">🪙</span>
@@ -207,7 +203,9 @@ export default function TournamentDetailPage() {
                                                 <div className="p-2 divide-y divide-white/5">
                                                     <div className="p-3 flex items-center justify-between">
                                                         <div className="flex items-center gap-3">
-                                                            <Trophy size={16} className="text-[#D4A017]" />
+                                                            <div className="relative w-6 h-6">
+                                                                <Image src="/prize.png" alt="prize" fill className="object-contain" />
+                                                            </div>
                                                             <span className="text-white/80 text-[13px] font-bold">1st Prize</span>
                                                         </div>
                                                         <div className="flex items-center gap-1.5">
@@ -217,7 +215,9 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                     <div className="p-3 flex items-center justify-between">
                                                         <div className="flex items-center gap-3">
-                                                            <Trophy size={16} className="text-[#C0C0C0]" />
+                                                            <div className="relative w-6 h-6">
+                                                                <Image src="/prize.png" alt="prize" fill className="object-contain" />
+                                                            </div>
                                                             <span className="text-white/80 text-[13px] font-bold">2nd Prize</span>
                                                         </div>
                                                         <div className="flex items-center gap-1.5">
@@ -227,7 +227,9 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                     <div className="p-3 flex items-center justify-between">
                                                         <div className="flex items-center gap-3">
-                                                            <Trophy size={16} className="text-[#CD7F32]" />
+                                                            <div className="relative w-6 h-6">
+                                                                <Image src="/prize.png" alt="prize" fill className="object-contain" />
+                                                            </div>
                                                             <span className="text-white/80 text-[13px] font-bold">3rd Prize</span>
                                                         </div>
                                                         <div className="flex items-center gap-1.5">
@@ -247,12 +249,12 @@ export default function TournamentDetailPage() {
                                                     <div key={round} className="group">
                                                         <div className="flex justify-between items-start">
                                                             <div>
-                                                                <h4 className="text-white font-bold text-[14px]">Qualifiers <span className="text-gray-400 font-medium">(Round {round})</span></h4>
-                                                                <p className="text-gray-400 text-[12px] mt-1">Top 4 to next round</p>
+                                                                <h4 className="text-white font-semibold font-inter text-[14px]">Qualifiers <span className="text-gray-400 font-medium">(Round {round})</span></h4>
+                                                                <p className="text-white text-[12px] mt-1">Top 4 to next round</p>
                                                             </div>
                                                             <div className="flex flex-col items-end gap-1">
-                                                                <span className="bg-[#1A1033] text-[#A855F7] text-[10px] font-bold px-2 py-0.5 rounded-md">Single Elimination</span>
-                                                                <span className="text-gray-400 text-[11px] font-medium tracking-tight">3rd Aug, 10:00 pm</span>
+                                                                <span className="bg-[#1A1033] text-[#ffffff] text-[10px] font-semibold px-2 py-0.5 rounded-md">Single Elimination</span>
+                                                                <span className="text-white text-[11px] font-medium tracking-tight">3rd Aug, 10:00 pm</span>
                                                             </div>
                                                         </div>
                                                         {round < 3 && <div className="border-b-[3px] border-white/20 mt-4" />}
@@ -295,7 +297,7 @@ export default function TournamentDetailPage() {
                                                         <div className="relative w-8 h-8 rounded-full overflow-hidden bg-[#2E2463]">
                                                             <Image src="/GS.png" alt="GS" fill className="object-cover" />
                                                         </div>
-                                                        <span className="text-white font-black text-[15px] uppercase">GS ESPORTS</span>
+                                                        <span className="text-white font-inter font-bold text-[15px] uppercase">GS ESPORTS</span>
                                                     </div>
                                                     <div className="flex items-center gap-3 text-gray-400 group">
                                                         <Mail size={16} className="group-hover:text-white transition-colors" />
@@ -327,7 +329,7 @@ export default function TournamentDetailPage() {
                                                                 </div>
                                                             </div>
                                                             {/* Overlay Logo */}
-                                                            <div className="absolute -bottom-5 right-4 w-12 h-12 rounded-full border-4 border-[#05140C] overflow-hidden bg-[#2E2463] z-10">
+                                                            <div className="absolute -bottom-5 right-4 w-12 h-12 rounded-full border-[1px] border-[#05140C] overflow-hidden bg-[#2E2463] z-10">
                                                                 <Image src="/GS.png" alt="GS" fill className="object-cover" />
                                                             </div>
                                                         </div>
@@ -387,7 +389,9 @@ export default function TournamentDetailPage() {
                                                 <div className="p-2 divide-y divide-white/5">
                                                     <div className="p-3 flex items-center justify-between">
                                                         <div className="flex items-center gap-3">
-                                                            <Trophy size={16} className="text-[#D4A017]" />
+                                                            <div className="relative w-6 h-6">
+                                                                <Image src="/prize.png" alt="prize" fill className="object-contain" />
+                                                            </div>
                                                             <span className="text-white/80 text-[13px] font-bold">1st Prize</span>
                                                         </div>
                                                         <div className="flex items-center gap-1.5">
@@ -397,7 +401,9 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                     <div className="p-3 flex items-center justify-between">
                                                         <div className="flex items-center gap-3">
-                                                            <Trophy size={16} className="text-[#C0C0C0]" />
+                                                            <div className="relative w-6 h-6">
+                                                                <Image src="/prize.png" alt="prize" fill className="object-contain" />
+                                                            </div>
                                                             <span className="text-white/80 text-[13px] font-bold">2nd Prize</span>
                                                         </div>
                                                         <div className="flex items-center gap-1.5">
@@ -407,7 +413,9 @@ export default function TournamentDetailPage() {
                                                     </div>
                                                     <div className="p-3 flex items-center justify-between">
                                                         <div className="flex items-center gap-3">
-                                                            <Trophy size={16} className="text-[#CD7F32]" />
+                                                            <div className="relative w-6 h-6">
+                                                                <Image src="/prize.png" alt="prize" fill className="object-contain" />
+                                                            </div>
                                                             <span className="text-white/80 text-[13px] font-bold">3rd Prize</span>
                                                         </div>
                                                         <div className="flex items-center gap-1.5">

@@ -8,7 +8,7 @@ import { Navbar } from '@/components/layout/Navbar';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[#001208] flex flex-col pb-24 md:pb-8">
+    <div className="min-h-screen bg-[#001208] flex flex-col pt-[62px] md:pt-[74px] lg:pt-[76px] pb-24 md:pb-8 lg:pr-[400px]">
       {/* Navbar */}
       <Navbar />
 
@@ -29,8 +29,10 @@ export default function HomePage() {
         {/* Compete in Battles */}
         <CompeteInBattles />
 
-        {/* Game Highlights */}
-        <GameHighlights />
+        {/* Game Highlights - Mobile & Tablet */}
+        <div className="lg:hidden">
+          <GameHighlights />
+        </div>
 
       </div>
     </div>

@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export const BouncyBirdBanner = () => {
     return (
-        <section className="mt-8 w-full max-w-[1200px] md:hidden">
-            <div className="relative w-full h-[140px] rounded-[24px] overflow-hidden shadow-lg border-2 border-white/20">
+        <section className="mt-6 w-full max-w-[1200px] md:hidden">
+            <div className="relative w-full h-[140px] rounded-[10px] overflow-hidden shadow-lg">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
@@ -43,12 +43,9 @@ export const BouncyBirdBanner = () => {
                             A game for everyone
                         </p>
 
-                        <div className="flex items-center gap-2 mt-4">
-                            <span className="text-[#000000] font-bold text-[16px]">
-                                Play daily, win weekly🪙
-                            </span>
-
-                        </div>
+                        <span className="text-[#000000] font-bold font-inter text-[16px] mt-3 whitespace-nowrap block">
+                            Play daily, win weekly🪙
+                        </span>
                     </div>
 
                     {/* Right Section: Bird & Play Button */}
@@ -64,7 +61,7 @@ export const BouncyBirdBanner = () => {
 
                         <button className="relative group overflow-visible">
                             <div
-                                className="relative px-6 py-0.5 rounded-full border-[3px] border-[#8D5B3A] flex items-center justify-center overflow-hidden"
+                                className="relative px-4  rounded-full border-[3px] border-[#8D5B3A] flex items-center justify-center overflow-hidden"
                                 style={{
                                     background: 'linear-gradient(to bottom, #26F026 0%, #0D8D0D 100%)',
                                 }}
@@ -75,10 +72,10 @@ export const BouncyBirdBanner = () => {
 
                                 {/* Text with thick outline */}
                                 <span
-                                    className="text-white font-[1000] font-black-han-sans text-[22px] tracking-tight relative z-10"
+                                    className="text-white font-[1000]  font-black-han-sans text-[26px] tracking-tight relative z-10"
                                     style={{
-                                        WebkitTextStroke: '1.5px black',
-                                        filter: 'drop-shadow(1.5px 1.5px 0px black)',
+                                        WebkitTextStroke: '0.5px black',
+                                        filter: 'drop-shadow(0.5px 0.5px 0px black)',
                                         fontFamily: 'system-ui, sans-serif'
                                     }}
                                 >

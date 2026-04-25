@@ -1,16 +1,17 @@
+'use client';
 // components/layout/Navbar.tsx
 import { Bell } from 'lucide-react';
 import Image from 'next/image';
 
 export const Navbar = () => {
     return (
-        <nav className="w-full h-20 flex items-center justify-between px-4 md:px-8 border-b-2 border-white/20">
+        <nav className="h-[62px] md:h-[74px] lg:h-[76px] fixed top-0 left-0 right-0 bg-[#001208]/95 backdrop-blur-md z-40 flex items-center justify-between px-4 md:px-8 border-b-0 md:border-b-2 border-white/20 transition-all duration-300">
 
             {/* Mobile View Toggle/Logo */}
-            <div className="md:hidden flex items-center px-4">
+            <div className="md:hidden flex items-center pl-1 pr-4">
                 {/* Mobile Profile Section */}
                 <div className="relative flex items-center group">
-                    <div className="w-10 h-10 rounded-full bg-[#E5E7EB] overflow-hidden flex-shrink-0 border border-white/10 relative">
+                    <div className="w-9 h-9 rounded-full bg-[#E5E7EB] overflow-hidden flex-shrink-0 border border-white/10 relative">
                         <Image src="/image.png" alt="User Avatar" width={40} height={40} className="object-cover w-full h-full scale-110" />
                     </div>
                     {/* Menu Badge */}
@@ -51,7 +52,7 @@ export const Navbar = () => {
                     <div className="w-9 h-9 rounded-full bg-[#E5E7EB] overflow-hidden flex-shrink-0 border border-white/10 relative">
                         <Image src="/image.png" alt="User Avatar" width={40} height={40} className="object-cover w-full h-full scale-110" />
                     </div>
-                    <span className="text-white font-bold text-[14px]">Saniya</span>
+                    <span className="text-white font-semibold font-inter text-[14px]">Saniya</span>
                 </div>
             </div>
 

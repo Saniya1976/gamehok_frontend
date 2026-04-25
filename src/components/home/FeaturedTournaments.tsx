@@ -31,8 +31,7 @@ const tournaments = [
 
 const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boolean }) => (
     <div
-        className={`relative rounded-2xl overflow-hidden bg-[#0A1610] flex-shrink-0 w-[310px] md:w-[48%] lg:w-[47%] transition-all ${active ? 'border-2 border-[#22C55E]' : 'border-2 border-white/20'
-            }`}
+        className="relative rounded-lg overflow-hidden bg-[#0A1610] flex-shrink-0 w-[250px] md:w-[48%] lg:w-[47%] transition-all border-[1px] border-white/20"
     >
         {/* Banner Image */}
         <div className="relative w-full h-[140px]">
@@ -51,13 +50,13 @@ const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boole
             <div className="absolute inset-0" />
 
             {/* Top badges row */}
-            <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+            <div className="absolute top-2 left-2.5 right-2.5 flex items-center justify-between">
                 {/* Registration Status */}
-                <span className="bg-black/70 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg">
+                <span className="bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-1 py-1 rounded-xl">
                     {t.status}
                 </span>
                 {/* Slots */}
-                <span className="bg-black/70 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg flex items-center gap-1">
+                <span className="bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-1 py-1 rounded-xl flex items-center gap-1">
                     <Users size={11} />
                     {t.slots}
                 </span>
@@ -78,7 +77,7 @@ const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boole
             </div>
 
             {/* GS Badge - Overlapping and Circular */}
-            <div className="absolute -bottom-4 right-3 w-12 h-12 rounded-full border-2 border-[#121726] bg-[#2E2463] shadow-lg flex items-center justify-center z-20 overflow-hidden">
+            <div className="absolute -bottom-4 right-3 w-12 h-12 rounded-full border-[1px] border-[#121726] bg-[#2E2463] shadow-lg flex items-center justify-center z-20 overflow-hidden">
                 <Image
                     src="/GS.png"
                     alt="GS Badge"
@@ -110,11 +109,11 @@ const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boole
 
 export const FeaturedTournaments = () => {
     return (
-        <section className="mt-8 w-full">
+        <section className="mt-4 w-full">
             {/* Section header */}
-            <div className="flex items-center justify-between mb-4">
-                <h2 className="text-white font-bold text-[20px]">Featured Tournaments</h2>
-                <button className="text-[#22C55E] font-bold text-[13px] tracking-wide hover:underline">
+            <div className="flex items-center justify-between mb-3">
+                <h2 className="text-white font-semibold font-inter text-[18px] md:text-[25px]">Featured Tournaments</h2>
+                <button className="text-[#22C55E] font-semibold font-inter text-[13px] md:text-[15px] tracking-wide hover:underline">
                     VIEW ALL
                 </button>
             </div>

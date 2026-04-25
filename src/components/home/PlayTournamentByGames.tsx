@@ -26,8 +26,8 @@ export const PlayTournamentByGames = () => {
     };
 
     return (
-        <section className="mt-8 w-full relative">
-            <h2 className="text-white font-bold text-[18px] mb-4">Play Tournaments by Games</h2>
+        <section className="mt-6 w-full relative">
+            <h2 className="text-white font-inter font-semibold text-[18px] md:text-[25px] mb-4">Play Tournaments by Games</h2>
 
             <div className="relative group">
                 {/* Navigation Buttons for Desktop */}
@@ -45,14 +45,14 @@ export const PlayTournamentByGames = () => {
                     <ChevronRight size={24} />
                 </button>
 
-                {/* Mobile: Grid | Desktop: Horizontal Carousel */}
+                {/* Mobile: Grid | Tablet/Desktop: Horizontal Carousel */}
                 <div
                     ref={scrollRef}
                     className="grid grid-cols-3 gap-3 md:flex md:overflow-x-auto md:gap-6 no-scrollbar transition-all"
                 >
                     {games.map((game, index) => (
-                        <div key={index} className="flex flex-col items-center flex-shrink-0 md:w-[calc(33.333%-16px)]">
-                            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-2">
+                        <div key={index} className="flex flex-col items-center flex-shrink-0 md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]">
+                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2">
                                 <Image
                                     src={game.image}
                                     alt={game.name}
