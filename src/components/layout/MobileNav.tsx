@@ -16,7 +16,9 @@ export const MobileNav = () => {
     ];
 
     return (
-        <nav className="lg:hidden fixed bottom-0 left-0 w-full h-[65px] bg-[#050B08] border-t-[2px] border-white/10 flex items-center justify-around px-2 z-50">
+        <nav className="lg:hidden fixed bottom-0 left-0 w-full h-[65px] bg-[#050B08] flex items-center justify-around px-2 z-50">
+            {/* Top Shine Line */}
+            <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-white/30 to-transparent shadow-[0_1px_5px_rgba(255,255,255,0.1)]"></div>
             {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
