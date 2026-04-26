@@ -52,7 +52,7 @@ export const PlayTournamentByGames = () => {
                 >
                     {games.map((game, index) => (
                         <div key={index} className="flex flex-col items-center flex-shrink-0 md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]">
-                            <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2">
+                            <div className="relative w-full aspect-[5/4] rounded-lg overflow-hidden mb-2">
                                 <Image
                                     src={game.image}
                                     alt={game.name}
@@ -60,7 +60,7 @@ export const PlayTournamentByGames = () => {
                                     className="object-cover"
                                 />
                             </div>
-                            <span className="text-white font-bold text-[11px] md:text-[14px] tracking-wide text-center uppercase">
+                            <span className="text-white font-semibold font-inter text-[11px] md:text-[14px] tracking-wide text-center uppercase">
                                 {game.name}
                             </span>
                         </div>

@@ -93,13 +93,13 @@ const TournamentCard = ({ t, active }: { t: typeof tournaments[0]; active: boole
 
             {/* Tags */}
             <div className="flex items-center gap-2 flex-wrap">
-                <span className="bg-[#1A2E20] text-[#FFFFFF] text-[11px] font-semibold px-2.5 py-0.5 rounded-md">
+                <span className="bg-[#1A2E20] text-[#FFFFFF] text-[13px] font-semibold px-2.5 py-0.5 rounded-md">
                     {t.game}
                 </span>
-                <span className="bg-[#1A2E20] text-[#FFFFFF] text-[11px] font-semibold px-2.5 py-0.5 rounded-md">
+                <span className="bg-[#1A2E20] text-[#FFFFFF] text-[13px] font-semibold px-2.5 py-0.5 rounded-md">
                     {t.mode}
                 </span>
-                <span className="bg-[#1A2E20] text-[#FFFFFF] text-[11px] font-semibold px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                <span className="bg-[#1A2E20] text-[#FFFFFF] text-[13px] font-semibold px-2.5 py-0.5 rounded-md flex items-center gap-1">
                     Entry-{t.entry} <span className="text-yellow-400">🪙</span>
                 </span>
             </div>

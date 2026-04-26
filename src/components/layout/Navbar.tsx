@@ -15,10 +15,10 @@ export const Navbar = () => {
                         <Image src="/image.png" alt="User Avatar" width={40} height={40} className="object-cover w-full h-full scale-110" />
                     </div>
                     {/* Menu Badge */}
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#00A75D] rounded-full border-2 border-black flex flex-col items-center justify-center gap-[2px] shadow-lg">
-                        <div className="w-3 h-[1.5px] bg-white"></div>
-                        <div className="w-3 h-[1.5px] bg-white"></div>
-                        <div className="w-3 h-[1.5px] bg-white"></div>
+                    <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#00A75D] rounded-full border-2 border-black flex flex-col items-center justify-center gap-[2px] shadow-lg">
+                        <div className="w-2 h-[1px] bg-white"></div>
+                        <div className="w-2 h-[1px] bg-white"></div>
+                        <div className="w-2 h-[1px] bg-white"></div>
                     </div>
                 </div>
             </div>
