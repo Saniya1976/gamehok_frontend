@@ -1,7 +1,9 @@
 ```markdown
 # Gamehok Frontend 🎮
 
-A fast and easy-to-use gaming website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This platform is made for gamers to join tournaments, organize scrims, and connect with others.
+```markdown
+A fast and easy-to-use gaming website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This platform is made for gamers to join tournaments, organize scrims, and connect with others. I have implemented a pixel-perfect home page, a comprehensive "My Tournament" section featuring both lobbies and overview pages, and fully responsive sidebars and navbars that strictly follow the provided Figma designs.
+```
 
 ## 🚀 Getting Started
 
