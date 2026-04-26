@@ -27,12 +27,12 @@ export const BattleCard = ({ battle }: BattleCardProps) => {
             </div>
 
             {/* Text Content */}
-            <h3 className="text-white font-bold font-inter text-[14px] leading-tight mb-0.5">{title}</h3>
-            <p className="text-white font-semibold font-inter text-[12px] mb-2">{organization}</p>
+            <h3 className="text-white font-extrabold font-inter text-[14px] leading-tight mb-0.5">{title}</h3>
+            <p className="text-white/70 font-semibold font-inter text-[12px] mb-2">{organization}</p>
 
             <div className="px-4 mb-auto flex items-center justify-center h-[48px]">
                 <p
-                    className="text-[#E5E7EB] font-inter text-[12px] leading-[16px] text-center align-middle"
+                    className="text-[#E5E7EB]/80 font-inter text-[12px] leading-[16px] text-center align-middle"
                     style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
                 >
                     {description}
@@ -40,7 +40,7 @@ export const BattleCard = ({ battle }: BattleCardProps) => {
             </div>
 
             {/* Action Link */}
-            <button className="flex items-center gap-1 text-[#22C55E] font-semibold font-inter text-[16px] mb-4 hover:gap-2 transition-all">
+            <button className="flex items-center gap-1 text-[#22C55E]/90 font-bold font-inter text-[16px] mb-4 hover:gap-2 transition-all">
                 Explore scrims <ChevronRight size={14} />
             </button>
         </div>

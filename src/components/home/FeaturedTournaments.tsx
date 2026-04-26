@@ -5,9 +5,9 @@ import { TournamentCard } from './FeaturedTournaments/TournamentCard';
 
 export const FeaturedTournaments = () => {
     return (
-        <section className="mt-4 w-full">
+        <section className="mt-5 w-full">
             {/* Section header */}
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center justify-between mb-4">
                 <h2 className="text-white font-semibold font-inter text-[18px] md:text-[25px]">Featured Tournaments</h2>
                 <button className="text-[#22C55E] font-semibold font-inter text-[13px] md:text-[15px] tracking-wide hover:underline">
                     VIEW ALL

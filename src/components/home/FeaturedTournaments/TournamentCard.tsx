@@ -10,9 +10,9 @@ export const TournamentCard = ({ tournament }: TournamentCardProps) => {
     const { name, image, status, slots, prizePool, game, mode, entry } = tournament;
 
     return (
-        <div className="relative rounded-lg overflow-hidden bg-[#0A1610] flex-shrink-0 w-[250px] md:w-[48%] lg:w-[47%] transition-all border-[1px] border-white/20">
+        <div className="relative rounded-lg overflow-hidden bg-[#0A1610] flex-shrink-0 w-[250px] md:w-[48%] lg:w-[47%] h-[262px] transition-all border-[1px] border-white/20">
             {/* Banner Image */}
-            <div className="relative w-full h-[140px]">
+            <div className="relative w-full h-[152px]">
                 <Image
                     src={image}
                     alt={name}
@@ -30,12 +30,12 @@ export const TournamentCard = ({ tournament }: TournamentCardProps) => {
                 {/* Top badges row */}
                 <div className="absolute top-2 left-2.5 right-2.5 flex items-center justify-between">
                     {/* Registration Status */}
-                    <span className="bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-1 py-1 rounded-xl">
+                    <span className="bg-black/70 backdrop-blur-sm text-white/90 text-[10px] font-bold px-2 py-1 rounded-xl">
                         {status}
                     </span>
                     {/* Slots */}
-                    <span className="bg-black/70 backdrop-blur-sm text-white text-[10px] font-semibold px-1 py-1 rounded-xl flex items-center gap-1">
-                        <Users size={11} />
+                    <span className="bg-black/70 backdrop-blur-sm text-white/90 text-[10px] font-bold px-2 py-1 rounded-xl flex items-center gap-1">
+                        <Users size={11} className="text-white/70" />
                         {slots}
                     </span>
                 </div>
@@ -45,9 +45,9 @@ export const TournamentCard = ({ tournament }: TournamentCardProps) => {
             <div className="relative flex items-center justify-between px-3 h-8" style={{ background: '#121726' }}>
                 <div className="flex items-center gap-1.5">
                     <Trophy size={14} className="text-[#D4A017]" />
-                    <span className="text-white text-[12px] font-medium">
+                    <span className="text-white/70 text-[12px] font-medium">
                         Prize Pool-{' '}
-                        <span className="font-bold">{prizePool}</span>{' '}
+                        <span className="font-bold text-white">{prizePool}</span>{' '}
                         <span className="text-[14px]">🪙</span>
                     </span>
                 </div>
@@ -65,17 +65,17 @@ export const TournamentCard = ({ tournament }: TournamentCardProps) => {
 
             {/* Card Body */}
             <div className="px-3 pt-2 pb-3">
-                <h4 className="text-white font-bold text-[15px] mb-2">{name}</h4>
+                <h4 className="text-white font-extrabold text-[15px] mb-2">{name}</h4>
 
                 {/* Tags */}
                 <div className="flex items-center gap-2 flex-wrap">
-                    <span className="bg-[#1A2E20] text-[#FFFFFF] text-[13px] font-semibold px-2.5 py-0.5 rounded-md">
+                    <span className="bg-[#1A2E20] text-white/90 text-[12px] font-bold px-2.5 py-0.5 rounded-md">
                         {game}
                     </span>
-                    <span className="bg-[#1A2E20] text-[#FFFFFF] text-[13px] font-semibold px-2.5 py-0.5 rounded-md">
+                    <span className="bg-[#1A2E20] text-white/90 text-[12px] font-bold px-2.5 py-0.5 rounded-md">
                         {mode}
                     </span>
-                    <span className="bg-[#1A2E20] text-[#FFFFFF] text-[13px] font-semibold px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                    <span className="bg-[#1A2E20] text-white/90 text-[12px] font-bold px-2.5 py-0.5 rounded-md flex items-center gap-1">
                         Entry-{entry} <span className="text-yellow-400">🪙</span>
                     </span>
                 </div>
