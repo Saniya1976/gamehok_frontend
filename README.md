@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+```markdown
+# Gamehok Frontend 🎮
 
-## Getting Started
+A fast and easy-to-use gaming website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. This platform is made for gamers to join tournaments, organize scrims, and connect with others.
 
-First, run the development server:
+## 🚀 Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### What you need
+- npm, yarn, or pnpm installed on your computer.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### How to install
+1. **Clone the project:**
+   ```bash
+   git clone <https://github.com/Saniya1976/gamehok_Frontend>
+   ```
+2. **Install the packages:**
+   ```bash
+   npm install
+   ```
+3. **Start the project:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Main Features
+- **Works on all devices**: The layout looks great on mobile, tablets, and desktops.
+- **Scrims & Battles**: Special sections to find daily practice matches and competitive games.
+- **Game Categories**: Quickly find games like BGMI and COD Mobile with simple navigation.
+- **Smart Mobile Menu**: A bottom navigation bar designed specifically for mobile users to move around easily.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎨 Design
+The website is built to look exactly like the original designs. We focus on making sure everything looks clean and consistent on every device.
 
-## Learn More
+## 🗃️ Data & Types
+- **Figma Data**: All static content and design data are centralized in `data.ts` to ensure the UI matches the Figma specifications.
+- **Type Safety**: Dedicated TypeScript interfaces are defined within the data layer to maintain strict type-checking across all components.
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Mobile Features
+- **Bouncy Bird UI**: Special banners and buttons that only show up on phones and tablets to make the mobile experience better.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tools We Used
+- **Framework**: [Next.js](https://nextjs.org/) (The base of the website).
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (For making it look good).
+- **Icons**: [Lucide React](https://lucide.dev/) (For simple and clean icons).
+- **Language**: **TypeScript** (To help prevent coding errors).
+- **Organization**: The code is organized into small, manageable pieces so it's easy to update.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚠️ Important Notes
+- **Image Quality**: The `HeroBanner` currently uses a picture (`greenstar.png`) with a solid background due to the unavailability of the original SVG or transparent image from Figma.
+- **Suggestion**: For the best look, we should replace this with a **transparent image (SVG or PNG)** so it blends perfectly with the background.
