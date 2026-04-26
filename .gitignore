@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-
+/REFACTOR_CHANGELOG.md
 # next.js
 /.next/
 /out/
