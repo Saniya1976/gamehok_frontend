@@ -1,14 +1,15 @@
 "use client";
-// components/layout/MobileNav.tsx
+
 import { Home, Trophy, Users, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { NavItem } from '@/types';
 
 export const MobileNav = () => {
     const pathname = usePathname();
     if (pathname !== '/') return null;
 
-    const navItems = [
+    const navItems: NavItem[] = [
         { label: 'Home', icon: Home, href: '/' },
         { label: 'My Tournament', icon: Trophy, href: '/tournament/1' },
         { label: 'Social', icon: Users, href: '#' },

@@ -1,17 +1,9 @@
 'use client';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
 import { useRef } from 'react';
-
-const games = [
-    { name: 'BGMI', image: '/BGMI.png' },
-    { name: 'FREE FIRE', image: '/freefire.png' },
-    { name: 'COD MOBILE', image: '/COD.png' },
-    { name: 'BGMI', image: '/BGMI.png' },
-    { name: 'FREE FIRE', image: '/freefire.png' },
-    { name: 'COD MOBILE', image: '/COD.png' },
-];
+import { GAMES } from '@/constants/data';
+import { GameCard } from './PlayTournamentByGames/GameCard';
 
 export const PlayTournamentByGames = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -50,20 +42,8 @@ export const PlayTournamentByGames = () => {
                     ref={scrollRef}
                     className="grid grid-cols-3 gap-3 md:flex md:overflow-x-auto md:gap-6 no-scrollbar transition-all"
                 >
-                    {games.map((game, index) => (
-                        <div key={index} className="flex flex-col items-center flex-shrink-0 md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]">
-                            <div className="relative w-full aspect-[5/4] rounded-lg overflow-hidden mb-2">
-                                <Image
-                                    src={game.image}
-                                    alt={game.name}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                            <span className="text-white font-semibold font-inter text-[11px] md:text-[14px] tracking-wide text-center uppercase">
-                                {game.name}
-                            </span>
-                        </div>
+                    {GAMES.map((game, index) => (
+                        <GameCard key={`${game.name}-${index}`} game={game} />
                     ))}
                 </div>
             </div>

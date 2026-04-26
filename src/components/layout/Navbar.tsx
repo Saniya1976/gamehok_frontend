@@ -1,5 +1,5 @@
 'use client';
-// components/layout/Navbar.tsx
+
 import { Bell } from 'lucide-react';
 import Image from 'next/image';
 
